@@ -28,15 +28,12 @@ public class ResponseProgressBody extends ResponseBody {
         this.mResponseBody = responseBody;
         this.mDownloadResponseHandler = downloadResponseHandler;
 
-
-
-
-
     }
 
     @Override
     public MediaType contentType() {
         return mResponseBody.contentType();
+
     }
 
     @Override
