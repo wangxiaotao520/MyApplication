@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+        <string-array name="provinces">
+            <item>上海</item>
+            <item>北京</item>
+            <item>杭州</item>
+            <item>广州</item>
+        </string-array>
+
+</resources>

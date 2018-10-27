@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorAccent"
+        />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/simpleDraweeview1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                fresco:placeholderImage="@mipmap/default_yulin"
+                fresco:placeholderImageScaleType="fitCenter" />
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/simpleDraweeview2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"
+                fresco:placeholderImage="@mipmap/default_yulin"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true" />
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/simpleDraweeview3"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center_horizontal"
+                fresco:placeholderImage="@mipmap/default_yulin"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundedCornerRadius="10dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:arc="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_centerHorizontal="true"
+    android:layout_width="345dp"
+    android:layout_height="160dp"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <com.czp.library.ArcProgress
+            android:layout_centerHorizontal="true"
+            android:id="@+id/myProgress1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            arc:radius="80dp"
+            arc:degree="0"
+            arc:progressStyle="arc"
+            arc:arcbgColor="#d4dbdd"
+            arc:progressColor="#00BCD5"
+            arc:borderWidth="12dp"
+            android:progress="45"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#00BCD5"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="85" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#d4dbdd"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:text="收缩压/mmHg" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="25dp"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <com.czp.library.ArcProgress
+            android:layout_centerHorizontal="true"
+            android:id="@+id/myProgress2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            arc:degree="0"
+            arc:progressStyle="arc"
+            arc:arcbgColor="#d4dbdd"
+            arc:progressColor="#FF9801"
+            arc:borderWidth="12dp"
+            arc:radius="80dp"
+            android:progress="80"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF9801"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="124" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#d4dbdd"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:text="舒张压/mmHg" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+
+</RelativeLayout>
