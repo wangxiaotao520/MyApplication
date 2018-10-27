@@ -28,6 +28,7 @@ public class ResponseProgressBody extends ResponseBody {
         this.mResponseBody = responseBody;
         this.mDownloadResponseHandler = downloadResponseHandler;
 
+
     }
 
     @Override
