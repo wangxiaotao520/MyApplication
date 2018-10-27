@@ -2,9 +2,10 @@ package com.myapplication.http.body;
 
 
 
+import com.myapplication.http.response.DownloadResponseHandler;
+
 import java.io.IOException;
 
-import com.myapplication.http.response.DownloadResponseHandler;
 import okhttp3.MediaType;
 import okhttp3.ResponseBody;
 import okio.Buffer;
@@ -26,6 +27,7 @@ public class ResponseProgressBody extends ResponseBody {
     public ResponseProgressBody(ResponseBody responseBody, DownloadResponseHandler downloadResponseHandler) {
         this.mResponseBody = responseBody;
         this.mDownloadResponseHandler = downloadResponseHandler;
+
     }
 
     @Override
