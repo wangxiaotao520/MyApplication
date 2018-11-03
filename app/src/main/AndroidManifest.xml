@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.FrescoActivity" />
+        <activity android:name=".ui.FresconActivity" />
         <activity android:name=".ui.FragmentTestActivity" />
         <activity android:name=".ui.GreenDaoActivity" />
         <activity android:name=".ui.SmartRefreshActivity" />

@@ -5,18 +5,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    <TextView
-        android:id="@+id/text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:layout_centerHorizontal="true" />
-    <Button
-        android:layout_below="@id/text_view"
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="请求"
-        android:layout_centerHorizontal="true" />
+    <!--<TextView-->
+        <!--android:id="@+id/text_view"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Hello World!"-->
+        <!--android:layout_centerHorizontal="true" />-->
+    <!--<Button-->
+        <!--android:layout_below="@id/text_view"-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="请求"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent" />
 
 </RelativeLayout>

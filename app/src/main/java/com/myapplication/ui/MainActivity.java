@@ -3,29 +3,35 @@ package com.myapplication.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 import com.myapplication.R;
 import com.myapplication.base.BaseActivity;
 import com.myapplication.http.MyOkHttp;
 import com.myapplication.http.response.RawResponseHandler;
 import com.myapplication.model.ModelEvent;
+import com.myapplication.ui.adapter.MainAdapter;
 import com.myapplication.utils.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * 测试的Activity,也是启动的activity
  */
 public class MainActivity extends BaseActivity {
 
-    private TextView text_view;
-    private Button button;
+
+    private ListView list_view;
+    private MainAdapter adapter;
+    private List<String> mDatas ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,26 +51,45 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
+        mDatas=new ArrayList<>();
+        list_view = findViewById(R.id.list_view);
+        adapter=new MainAdapter(this,mDatas);
+        list_view.setAdapter(adapter);
     }
 
     @Override
     protected void initData() {
+        mDatas.add("ArcProgressActivity");
+        mDatas.add("ChartActivity");
+        mDatas.add("CityPickerActivity");
+        mDatas.add("FragmentTestActivity");
+        mDatas.add("FrescoActivity");
+        mDatas.add("FresconActivity");
+        mDatas.add("GreenDaoActivity");
+        mDatas.add("SmartRefreshActivity");
+        mDatas.add("TabLayoutActivity");
 
+        adapter.notifyDataSetChanged();
     }
 
     @Override
     protected void initListener() {
-        text_view = findViewById(R.id.text_view);
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, ArcProgressActivity.class));
-                // requestData();
-             //   startActivityForResult(new Intent(MainActivity.this,CityPickerActivity.class), RequestCodeInfo.GETCITY);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String classStr = "com.myapplication.ui.";
+                classStr=classStr+mDatas.get(position);
+                Class clazz = null;
+                try {
+                    clazz = Class.forName(classStr);
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                Intent intent = new Intent(MainActivity.this,clazz);
+                startActivity(intent);
             }
         });
+
     }
     @Override
     protected int getLayoutId() {
@@ -90,7 +115,7 @@ public class MainActivity extends BaseActivity {
         MyOkHttp.get().post(url, params, new RawResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String response) {
-                text_view.setText(response+"");
+              //  text_view.setText(response+"");
 
             }
 

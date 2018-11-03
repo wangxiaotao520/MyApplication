@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.myapplication.R;
 import com.myapplication.model.UserEntity;
+import com.myapplication.ui.adapter.CYBChangeCityGridViewAdapter;
+import com.myapplication.ui.adapter.ContactAdapter;
 import com.myapplication.utils.ToastUtils;
 import com.myapplication.widget.QGridView;
 
