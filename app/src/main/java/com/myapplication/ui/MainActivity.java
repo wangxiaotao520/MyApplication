@@ -37,6 +37,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         //初始化
       EventBus.getDefault().register(this);
+    //  startActivities();
+      //  asfd
     }
 
     @Override

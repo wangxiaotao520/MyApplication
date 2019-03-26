@@ -31,5 +31,8 @@ public class FresconActivity extends AppCompatActivity {
         FrescoUtils.getInstance().setImageUri(simpleDraweeView2,imgUrl);
         FrescoUtils.getInstance().setImageUri(simpleDraweeView3,imgUrl);
 
+        //todo llljjaljfjldsajfs
+        //asdfjijdfskl
+        //asjfdkljlf
     }
 }
