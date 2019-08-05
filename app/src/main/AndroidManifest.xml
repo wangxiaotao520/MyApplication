@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppCompatTheme.Base">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.MainActivity"
+            android:keepScreenOn="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,6 +31,7 @@
         <activity android:name=".ui.TabLayoutActivity"></activity>
         <activity android:name=".ui.CityPickerActivity"></activity>
         <activity android:name=".ui.ArcProgressActivity"></activity>
+        <activity android:name=".ui.MyCoordinatelayoutActivity"></activity>
     </application>
 
 </manifest>

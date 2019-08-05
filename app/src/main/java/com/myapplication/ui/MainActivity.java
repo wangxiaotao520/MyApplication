@@ -3,6 +3,7 @@ package com.myapplication.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -34,6 +35,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         super.onCreate(savedInstanceState);
         //初始化
       EventBus.getDefault().register(this);
@@ -70,6 +72,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add("GreenDaoActivity");
         mDatas.add("SmartRefreshActivity");
         mDatas.add("TabLayoutActivity");
+        mDatas.add("MyCoordinatelayoutActivity");
 
         adapter.notifyDataSetChanged();
     }
