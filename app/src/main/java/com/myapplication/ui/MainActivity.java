@@ -73,6 +73,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add("SmartRefreshActivity");
         mDatas.add("TabLayoutActivity");
         mDatas.add("MyCoordinatelayoutActivity");
+        mDatas.add("NotificationActivity");
 
         adapter.notifyDataSetChanged();
     }

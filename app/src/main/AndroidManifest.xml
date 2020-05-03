@@ -32,6 +32,11 @@
         <activity android:name=".ui.CityPickerActivity"></activity>
         <activity android:name=".ui.ArcProgressActivity"></activity>
         <activity android:name=".ui.MyCoordinatelayoutActivity"></activity>
+        <activity android:name=".ui.NotificationActivity"></activity>
+
+        <service
+            android:name=".ui.NotificationService"
+            android:exported="false" />
     </application>
 
 </manifest>
