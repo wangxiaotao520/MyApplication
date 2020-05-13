@@ -74,6 +74,7 @@ public class MainActivity extends BaseActivity {
         mDatas.add("TabLayoutActivity");
         mDatas.add("MyCoordinatelayoutActivity");
         mDatas.add("NotificationActivity");
+        mDatas.add("JNINativeLibActivity");
 
         adapter.notifyDataSetChanged();
     }
